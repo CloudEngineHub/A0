@@ -1,6 +1,6 @@
 Project Page for $A_0$
 
-link: [https://minghaoguo20.github.io/A0/](https://minghaoguo20.github.io/A0/)
+link: [https://a-embodied.github.io/A0/](https://a-embodied.github.io/A0/)
 
 <!-- # Academic Project Page Template
 This is an academic paper project page template.
