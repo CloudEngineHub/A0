@@ -1,0 +1,350 @@
+<!-- https://minghaoguo20.github.io/A0/ -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>A0: An Affordance-Aware Hierarchical Model for General Robotic Manipulatione</title>
+  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
+  <link rel="icon" href="data:image/x-icon;base64,=" />
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <style>
+    .results-carousel img {
+      height: 400px;
+      object-fit: cover;
+      display: block; /* 让 img 成为块级元素 */
+      margin: 0 auto; /* 水平居中 */
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">A<sub>0</sub>: An Affordance-Aware Hierarchical Model for General
+              Robotic Manipulation</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://minghaoguo20.github.io/A0" target="_blank">Rongtao Xu</a><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="https://minghaoguo20.github.io/A0" target="_blank">Jian Zhang</a><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="https://minghaoguo20.github.io/A0" target="_blank">Minghao Guo</a><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="https://minghaoguo20.github.io/A0" target="_blank">Youpeng Wen</a><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="https://minghaoguo20.github.io/A0" target="_blank">Haoting Yang</a>,</span>
+              <span class="author-block">
+                <a href="https://minghaoguo20.github.io/A0" target="_blank">Min Lin</a>,</span>
+              <span class="author-block">
+                <a href="https://minghaoguo20.github.io/A0" target="_blank">Jianzheng Huang</a>,</span>
+              <span class="author-block">
+                <a href="https://minghaoguo20.github.io/A0" target="_blank">Zhe Li</a>,</span>
+              <span class="author-block">
+                <a href="https://minghaoguo20.github.io/A0" target="_blank">Kaidong Zhang</a>,</span>
+              <span class="author-block">
+                <a href="https://minghaoguo20.github.io/A0" target="_blank">Liqiong Wang</a>,</span>
+              <span class="author-block">
+                <a href="https://minghaoguo20.github.io/A0" target="_blank">Yuxuan Kuang</a>,</span>
+              <span class="author-block">
+                <a href="https://minghaoguo20.github.io/A0" target="_blank">Meng Cao</a>,</span>
+              <span class="author-block">
+                <a href="https://minghaoguo20.github.io/A0" target="_blank">Feng Zheng</a>,</span>
+              <span class="author-block">
+                <a href="https://minghaoguo20.github.io/A0" target="_blank">Xiaodan Liang</a><sup>†</sup></span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <!-- <span class="author-block">MBZUAI<br>Conference name and year</span> -->
+              <span class="eql-cntrb">
+                <small>
+                  <sup>*</sup> Indicates Equal Contribution
+                  <sup>†</sup> Indicates Corresponding Author
+                </small>
+              </span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv (Coming soon)</span>
+                  </a>
+                </span>
+
+                <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper (Coming soon)</span>
+                  </a>
+                </span>
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code (Coming soon)</span>
+                  </a>
+                </span>
+
+                <!-- Supplementary PDF link -->
+                <span class="link-block">
+                  <a href="https://minghaoguo20.github.io/A0/" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Supplementary (Coming soon)</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Teaser video-->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="a0_latex/figures/introduction1.png" alt="MY ALT TEXT" />
+        <h2 class="subtitle has-text-centered">
+          The A<sub>0</sub> model decomposes robotic manipulation tasks into two levels: (1) high-level spatial
+          affordance understanding and (2) low-level action execution. A<sub>0</sub> leverages an Embodiment-Agnostic
+          Affordance Representation to predict object-centric contact points and post-contact trajectories. The
+          architecture includes well-designed key components for affordance learning. A<sub>0</sub> is pre-trained on a
+          largescale dataset of contact points and fine-tuned on annotated trajectories, enabling generalization across
+          diverse robotic platforms. Zoom-in for the best of views.
+        </h2>
+      </div>
+    </div>
+  </section>
+  <!-- End teaser video -->
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Robotic manipulation faces critical challenges in understanding spatial affordances—the "where" and "how"
+              of object interactions—essential for complex manipulation tasks like wiping a board or stacking objects.
+              Existing methods, including modular-based and end-to-end approaches, often lack robust spatial reasoning
+              capabilities. Unlike recent point-based and flow-based affordance methods that focus on dense spatial
+              representations or trajectory modeling, we propose A<sub>0</sub>, a hierarchical affordance-aware
+              diffusion model that decomposes manipulation task into high-level spatial affordance understanding and
+              low-level action execution. A<sub>0</sub> leverages the Embodiment-Agnostic Affordance Representation,
+              which captures object-centric spatial affordances by predicting contact point and post-contact
+              trajectories. A<sub>0</sub> is pre-trained on 1 million contact points data and fine-tuned on annotated
+              trajectories, enabling generalization across platforms. Key components include Position Offset Attention
+              for motion-aware feature extraction and a Spatial Information Aggregation Layer for precise coordinate
+              mapping. The model's output is executed by the action execution module. Experiments on multiple robotic
+              systems (Franka, Kinova, Realman and Dobot) demonstrate A<sub>0</sub>'s superior performance in complex
+              tasks, showcasing its efficiency, flexibility, and real-world applicability.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="a0_latex/figures/methodv5.png" alt="MY ALT TEXT" />
+        <h2 class="subtitle has-text-centered">
+          Overview of A 0model.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="a0_latex/figures/teaser.png" alt="MY ALT TEXT" />
+        <h2 class="subtitle has-text-centered">
+          Comparison of different manipulation methods.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="a0_latex/figures/Qualitative.png" alt="MY ALT TEXT" />
+        <h2 class="subtitle has-text-centered">
+          Qualitative Results.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  
+
+
+  <!-- Youtube video -->
+  <!-- <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Video Presentation</h2>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+
+            <div class="publication-video">
+              <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- End youtube video -->
+
+
+  <!-- Video carousel -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3 has-text-centered">Real World Demos</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-video1">
+            <img src="a0_latex/figures/afford_rdt_demos_2_2.png" alt="MY ALT TEXT" />
+          </div>
+          <div class="item item-video2">
+            <img src="a0_latex/figures/afford_rdt_demos_2_3.png" alt="MY ALT TEXT" />
+          </div>
+          <div class="item item-video3">
+            <img src="a0_latex/figures/afford_rdt_demos_2_4.png" alt="MY ALT TEXT" />
+          </div>
+          <div class="item item-video3">
+            <img src="a0_latex/figures/afford_rdt_demos_2.png" alt="MY ALT TEXT" />
+          </div>
+          <div class="item item-video3">
+            <img src="a0_latex/figures/afford_rdt_demos_3.png" alt="MY ALT TEXT" />
+          </div>
+          <div class="item item-video3">
+            <img src="a0_latex/figures/afford_rdt_demos_32.png" alt="MY ALT TEXT" />
+          </div>
+          <div class="item item-video3">
+            <img src="a0_latex/figures/afford_rdt_demos_33.png" alt="MY ALT TEXT" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End video carousel -->
+
+
+
+
+
+
+
+
+  <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>BibTex Code</code></pre>
+    </div>
+  </section>
+  <!--End BibTex citation -->
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              <!-- You are free to borrow the source code of this website, we just ask that you link back to this page in the
+              footer. <br> This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>. -->
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+</body>
+
+</html>
