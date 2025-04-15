@@ -48,8 +48,10 @@
     .results-carousel img {
       height: 400px;
       object-fit: cover;
-      display: block; /* 让 img 成为块级元素 */
-      margin: 0 auto; /* 水平居中 */
+      display: block;
+      /* 让 img 成为块级元素 */
+      margin: 0 auto;
+      /* 水平居中 */
     }
   </style>
 </head>
@@ -66,40 +68,30 @@
               Robotic Manipulation</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
-              <span class="author-block">
-                <a href="https://minghaoguo20.github.io/A0" target="_blank">Rongtao Xu</a><sup>*</sup>,</span>
-              <span class="author-block">
-                <a href="https://minghaoguo20.github.io/A0" target="_blank">Jian Zhang</a><sup>*</sup>,</span>
-              <span class="author-block">
-                <a href="https://minghaoguo20.github.io/A0" target="_blank">Minghao Guo</a><sup>*</sup>,</span>
-              <span class="author-block">
-                <a href="https://minghaoguo20.github.io/A0" target="_blank">Youpeng Wen</a><sup>*</sup>,</span>
-              <span class="author-block">
-                <a href="https://minghaoguo20.github.io/A0" target="_blank">Haoting Yang</a>,</span>
-              <span class="author-block">
-                <a href="https://minghaoguo20.github.io/A0" target="_blank">Min Lin</a>,</span>
-              <span class="author-block">
-                <a href="https://minghaoguo20.github.io/A0" target="_blank">Jianzheng Huang</a>,</span>
-              <span class="author-block">
-                <a href="https://minghaoguo20.github.io/A0" target="_blank">Zhe Li</a>,</span>
-              <span class="author-block">
-                <a href="https://minghaoguo20.github.io/A0" target="_blank">Kaidong Zhang</a>,</span>
-              <span class="author-block">
-                <a href="https://minghaoguo20.github.io/A0" target="_blank">Liqiong Wang</a>,</span>
-              <span class="author-block">
-                <a href="https://minghaoguo20.github.io/A0" target="_blank">Yuxuan Kuang</a>,</span>
-              <span class="author-block">
-                <a href="https://minghaoguo20.github.io/A0" target="_blank">Meng Cao</a>,</span>
-              <span class="author-block">
-                <a href="https://minghaoguo20.github.io/A0" target="_blank">Feng Zheng</a>,</span>
-              <span class="author-block">
-                <a href="https://minghaoguo20.github.io/A0" target="_blank">Xiaodan Liang</a><sup>†</sup></span>
+              <span class="author-block"></span>Rongtao Xu<sup>1,*</sup>,</span>
+              <span class="author-block"></span>Jian Zhang<sup>1,*</sup>,</span>
+              <span class="author-block"></span>Minghao Guo<sup>1,*</sup>,</span>
+              <span class="author-block"></span>Youpeng Wen<sup>2,*</sup>,</span>
+              <span class="author-block"></span>Haoting Yang<sup>3</sup>,</span>
+              <span class="author-block"></span>Min Lin<sup>2</sup>,</span>
+              <span class="author-block"></span>Jianzheng Huang<sup>3</sup>,</span>
+              <span class="author-block"></span>Zhe Li<sup>3</sup>,</span>
+              <span class="author-block"></span>Kaidong Zhang<sup>2</sup>,</span>
+              <span class="author-block"></span>Liqiong Wang<sup>3</sup>,</span>
+              <span class="author-block"></span>Yuxuan Kuang<sup>1</sup>,</span>
+              <span class="author-block"></span>Meng Cao<sup>1</sup>,</span>
+              <span class="author-block"></span>Feng Zheng<sup>3</sup>,</span>
+              <span class="author-block"></span>Xiaodan Liang<sup>1,2,†</sup></span>
             </div>
 
             <div class="is-size-5 publication-authors">
               <!-- <span class="author-block">MBZUAI<br>Conference name and year</span> -->
               <span class="eql-cntrb">
                 <small>
+                  <sup>1</sup> MBZUAI
+                  <sup>2</sup> Sun Yat-sen University
+                  <sup>3</sup> Southern University of Science and Technology
+                  <br>
                   <sup>*</sup> Indicates Equal Contribution
                   <sup>†</sup> Indicates Corresponding Author
                 </small>
@@ -132,7 +124,7 @@
 
                 <!-- Github link -->
                 <span class="link-block">
-                  <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                  <a href="https://github.com/A-embodied/A0" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -244,7 +236,17 @@
     </div>
   </section>
 
-  
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="a0_latex/figures/pretrain_res_subplots.png" alt="MY ALT TEXT" />
+        <h2 class="subtitle has-text-centered">
+          Performance of MAE↓ with pretraining on three datasets.
+        </h2>
+      </div>
+    </div>
+  </section>
+
 
 
   <!-- Youtube video -->
@@ -295,12 +297,159 @@
             <img src="a0_latex/figures/afford_rdt_demos_33.png" alt="MY ALT TEXT" />
           </div>
         </div>
+
+        <br><br><br><br>
+
+        <div class="columns is-centered has-text-centered">
+          <div style="flex: 1; margin: 0.5%; text-align: center;">
+            <video poster="" autoplay controls muted loop playsinline width="100%"
+              style="border-radius: 4%; position: relative; left: -2%;">
+              <source src="videos/f1.mp4" type="video/mp4">
+            </video>
+            <p style="font-size: 16px;">Open drawer @Franka</p>
+          </div>
+          <div style="flex: 1; margin: 0.5%; text-align: center;">
+            <video poster="" autoplay controls muted loop playsinline width="100%"
+              style="border-radius: 4%; position: relative; left: -1.5%;">
+              <source src="videos/f2.mp4" type="video/mp4">
+            </video>
+            <p style="font-size: 16px;">Place on the plate @Franka</p>
+          </div>
+          <div style="flex: 1; margin: 0.5%; text-align: center;">
+            <video poster="" autoplay controls muted loop playsinline width="100%"
+              style="border-radius: 4%; position: relative; left: 0.5%;">
+              <source src="videos/f3.mp4" type="video/mp4">
+            </video>
+            <p style="font-size: 16px;">Press button @Franka</p>
+          </div>
+          <div style="flex: 1; margin: 0.5%; text-align: center;">
+            <video poster="" autoplay controls muted loop playsinline width="100%"
+              style="border-radius: 4%; position: relative; left: 0.5%;">
+              <source src="videos/f4.mp4" type="video/mp4">
+            </video>
+            <p style="font-size: 16px;">Wipe the white board @Franka</p>
+          </div>
+        </div>
+
+        <br><br>
+
+        <div class="columns is-centered has-text-centered">
+          <div style="flex: 1; margin: 0.5%; text-align: center;">
+            <video poster="" autoplay controls muted loop playsinline width="100%"
+              style="border-radius: 4%; position: relative; left: 0.5%;">
+              <source src="videos/f5.mp4" type="video/mp4">
+            </video>
+            <p style="font-size: 16px;">Wipe the blackboard @Franka</p>
+          </div>
+          <div style="flex: 1; margin: 0.5%; text-align: center;">
+            <video poster="" autoplay controls muted loop playsinline width="100%"
+              style="border-radius: 4%; position: relative; left: 0.5%;">
+              <source src="videos/k1.mp4" type="video/mp4">
+            </video>
+            <p style="font-size: 16px;">Press button @Kinova Gen3</p>
+          </div>
+          <div style="flex: 1; margin: 0.5%; text-align: center;">
+            <video poster="" autoplay controls muted loop playsinline width="100%"
+              style="border-radius: 4%; position: relative; left: 0.5%;">
+              <source src="videos/k2.mp4" type="video/mp4">
+            </video>
+            <p style="font-size: 16px;">Open drawer meanwhile @Kinova Gen3</p>
+          </div>
+          <div style="flex: 1; margin: 0.5%; text-align: center;">
+            <video poster="" autoplay controls muted loop playsinline width="100%"
+              style="border-radius: 4%; position: relative; left: 0.5%;">
+              <source src="videos/k3.mp4" type="video/mp4">
+            </video>
+            <p style="font-size: 16px;">Pick place @Kinova Gen3</p>
+          </div>
+        </div>
+
+        <br><br>
+
+        <div class="columns is-centered has-text-centered">
+          <div style="flex: 1; margin: 0.5%; text-align: center;">
+            <video poster="" autoplay controls muted loop playsinline width="100%"
+              style="border-radius: 4%; position: relative; left: 0.5%;">
+              <source src="videos/k4.mp4" type="video/mp4">
+            </video>
+            <p style="font-size: 16px;">Wipe board @Kinova Gen3</p>
+          </div>
+          <div style="flex: 1; margin: 0.5%; text-align: center;">
+            <video poster="" autoplay controls muted loop playsinline width="100%"
+              style="border-radius: 4%; position: relative; left: 0.5%;">
+              <source src="videos/f6.mp4" type="video/mp4">
+            </video>
+            <p style="font-size: 16px;">Wipe the blackboard @Franka</p>
+          </div>
+          <div style="flex: 1; margin: 0.5%; text-align: center;">
+            <video poster="" autoplay controls muted loop playsinline width="100%"
+              style="border-radius: 4%; position: relative; left: 0.5%;">
+              <source src="videos/k5.mp4" type="video/mp4">
+            </video>
+            <p style="font-size: 16px;">Put the blue block on top of the red block @Kinova Gen3</p>
+          </div>
+          <div style="flex: 1; margin: 0.5%; text-align: center;">
+            <video poster="" autoplay controls muted loop playsinline width="100%"
+              style="border-radius: 4%; position: relative; left: 0.5%;">
+              <source src="videos/r1.mp4" type="video/mp4">
+            </video>
+            <p style="font-size: 16px;">Wipe the blackboard @Realman</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
   <!-- End video carousel -->
 
 
+
+  <!-- <section class="section">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-1">Real Robot Experiments</h2>
+        <div class="columns">
+          <img id="table2" width="70%" src="static/images/table2.png"
+            style="display: block; margin-left: auto; margin-right: auto">
+        </div>
+        <div class="content has-text-justified">
+          <br>
+          <p style="font-size: 24px;">
+          </p>
+
+          <div class="columns is-centered has-text-centered">
+            <div style="flex: 1; margin: 0.5%; text-align: center;">
+              <video poster="" autoplay controls muted loop playsinline width="100%"
+                style="border-radius: 4%; position: relative; left: -2%;">
+                <source src="static/videos/pickup_00.mp4" type="video/mp4">
+              </video>
+              <p style="font-size: 16px;">pick up the blue block.</p>
+            </div>
+            <div style="flex: 1; margin: 0.5%; text-align: center;">
+              <video poster="" autoplay controls muted loop playsinline width="100%"
+                style="border-radius: 4%; position: relative; left: -1.5%;">
+                <source src="static/videos/sweep_00.mp4" type="video/mp4">
+              </video>
+              <p style="font-size: 16px;">Sweep the yellow block into pink stickers.</p>
+            </div>
+            <div style="flex: 1; margin: 0.5%; text-align: center;">
+              <video poster="" autoplay controls muted loop playsinline width="100%"
+                style="border-radius: 4%; position: relative; left: 0.5%;">
+                <source src="static/videos/press_button_00.mp4" type="video/mp4">
+              </video>
+              <p style="font-size: 16px;">Press the button.</p>
+            </div>
+            <div style="flex: 1; margin: 0.5%; text-align: center;">
+              <video poster="" autoplay controls muted loop playsinline width="100%"
+                style="border-radius: 4%; position: relative; left: 0.5%;">
+                <source src="static/videos/open_drawer_00.mp4" type="video/mp4">
+              </video>
+              <p style="font-size: 16px;">xxxxxxxxxxxxxxxxxxx</p>
+            </div>
+          </div>
+
+        </div>
+  </section> -->
 
 
 

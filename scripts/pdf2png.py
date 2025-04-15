@@ -42,15 +42,15 @@ def convert_files(source_root: Path, target_root: Path):
 def main():
     # 设置命令行参数解析
     parser = argparse.ArgumentParser(
-        description="根据源文件夹路径 --path0，将所有 PDF 文件转换为 PNG，并复制其他图像文件到目标文件夹 --path1 中，保持原有文件结构。"
+        description="根据源文件夹路径 --src，将所有 PDF 文件转换为 PNG，并复制其他图像文件到目标文件夹 --des 中，保持原有文件结构。"
     )
-    parser.add_argument("--path0", required=True, help="源文件夹路径")
-    parser.add_argument("--path1", required=True, help="目标文件夹路径")
+    parser.add_argument("--src", required=True, help="源文件夹路径")
+    parser.add_argument("--des", required=True, help="目标文件夹路径")
     parser.add_argument("--force", "-f", action="store_true", help="若目标文件夹存在，则先删除后创建")
     args = parser.parse_args()
 
-    source_root = Path(args.path0)
-    target_root = Path(args.path1)
+    source_root = Path(args.src)
+    target_root = Path(args.des)
 
     # 判断目标文件夹是否存在
     if target_root.exists():
