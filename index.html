@@ -53,6 +53,12 @@
       margin: 0 auto;
       /* 水平居中 */
     }
+
+    .myimg {
+      width: 80%;
+      display: block;
+      margin: 0 auto;
+    }
   </style>
 </head>
 
@@ -68,20 +74,29 @@
               Robotic Manipulation</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
-              <span class="author-block"></span>Rongtao Xu<sup>1,*</sup>,</span>
-              <span class="author-block"></span>Jian Zhang<sup>1,*</sup>,</span>
-              <span class="author-block"></span>Minghao Guo<sup>1,*</sup>,</span>
-              <span class="author-block"></span>Youpeng Wen<sup>2,*</sup>,</span>
-              <span class="author-block"></span>Haoting Yang<sup>3</sup>,</span>
-              <span class="author-block"></span>Min Lin<sup>2</sup>,</span>
-              <span class="author-block"></span>Jianzheng Huang<sup>3</sup>,</span>
-              <span class="author-block"></span>Zhe Li<sup>3</sup>,</span>
-              <span class="author-block"></span>Kaidong Zhang<sup>2</sup>,</span>
-              <span class="author-block"></span>Liqiong Wang<sup>3</sup>,</span>
-              <span class="author-block"></span>Yuxuan Kuang<sup>1</sup>,</span>
-              <span class="author-block"></span>Meng Cao<sup>1</sup>,</span>
-              <span class="author-block"></span>Feng Zheng<sup>3,†</sup>,</span>
-              <span class="author-block"></span>Xiaodan Liang<sup>1,2,†</sup></span>
+              <span class="author-block"><a href="https://scholar.google.com.hk/citations?user=_IUq7ooAAAAJ&hl"
+                  target="_blank">Rongtao Xu</a><sup>1,*</sup>,</span>
+              <span class="author-block"><a href="https://scholar.google.com/citations?user=OrodefUAAAAJ"
+                  target="_blank">Jian Zhang</a><sup>1,*</sup>,</span>
+              <span class="author-block"><a href="https://minghaoguo20.github.io/" target="_blank">Minghao
+                  Guo</a><sup>1,*</sup>,</span>
+              <span class="author-block"><a href="https://scholar.google.com.hk/citations?user=S54_OvAAAAAJ"
+                  target="_blank">Youpeng Wen</a><sup>2,*</sup>,</span>
+              <span class="author-block">Haoting Yang<sup>3</sup>,</span>
+              <span class="author-block">Min Lin<sup>2</sup>,</span>
+              <span class="author-block">Jianzheng Huang<sup>3</sup>,</span>
+              <span class="author-block">Zhe Li<sup>3</sup>,</span>
+              <span class="author-block"><a href="https://scholar.google.com/citations?user=G7IdYTcAAAAJ"
+                  target="_blank">Kaidong Zhang</a><sup>2</sup>,</span>
+              <span class="author-block">Liqiong Wang<sup>3</sup>,</span>
+              <span class="author-block"><a href="https://github.com/yxKryptonite" target="_blank">Yuxuan
+                  Kuang</a><sup>1</sup>,</span>
+              <span class="author-block"><a href="https://mengcaopku.github.io/" target="_blank">Meng
+                  Cao</a><sup>1</sup>,</span>
+              <span class="author-block"><a href="https://www.sustech.edu.cn/en/faculties/zhengfeng.html"
+                  target="_blank">Feng Zheng</a><sup>3,†</sup>,</span>
+              <span class="author-block"><a href="https://lemondan.github.io/" target="_blank">Xiaodan
+                  Liang</a><sup>1,2,†</sup></span>
             </div>
 
             <div class="is-size-5 publication-authors">
@@ -170,103 +185,6 @@
   </section>
   <!-- End teaser video -->
 
-  <!-- Paper abstract -->
-  <section class="section hero is-light">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Abstract</h2>
-          <div class="content has-text-justified">
-            <p>
-              Robotic manipulation faces critical challenges in understanding spatial affordances—the "where" and "how"
-              of object interactions—essential for complex manipulation tasks like wiping a board or stacking objects.
-              Existing methods, including modular-based and end-to-end approaches, often lack robust spatial reasoning
-              capabilities. Unlike recent point-based and flow-based affordance methods that focus on dense spatial
-              representations or trajectory modeling, we propose A<sub>0</sub>, a hierarchical affordance-aware
-              diffusion model that decomposes manipulation task into high-level spatial affordance understanding and
-              low-level action execution. A<sub>0</sub> leverages the Embodiment-Agnostic Affordance Representation,
-              which captures object-centric spatial affordances by predicting contact point and post-contact
-              trajectories. A<sub>0</sub> is pre-trained on 1 million contact points data and fine-tuned on annotated
-              trajectories, enabling generalization across platforms. Key components include Position Offset Attention
-              for motion-aware feature extraction and a Spatial Information Aggregation Layer for precise coordinate
-              mapping. The model's output is executed by the action execution module. Experiments on multiple robotic
-              systems (Franka, Kinova, Realman and Dobot) demonstrate A<sub>0</sub>'s superior performance in complex
-              tasks, showcasing its efficiency, flexibility, and real-world applicability.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End paper abstract -->
-
-
-  <section class="hero teaser">
-    <div class="container is-max-desktop">
-      <div class="hero-body">
-        <img src="a0_latex/figures/methodv5.png" alt="MY ALT TEXT" />
-        <h2 class="subtitle has-text-centered">
-          Overview of A 0model.
-        </h2>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="hero teaser">
-    <div class="container is-max-desktop">
-      <div class="hero-body">
-        <img src="a0_latex/figures/teaser.png" alt="MY ALT TEXT" />
-        <h2 class="subtitle has-text-centered">
-          Comparison of different manipulation methods.
-        </h2>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="hero teaser">
-    <div class="container is-max-desktop">
-      <div class="hero-body">
-        <img src="a0_latex/figures/Qualitative.png" alt="MY ALT TEXT" />
-        <h2 class="subtitle has-text-centered">
-          Qualitative Results.
-        </h2>
-      </div>
-    </div>
-  </section>
-
-  <section class="hero teaser">
-    <div class="container is-max-desktop">
-      <div class="hero-body">
-        <img src="a0_latex/figures/pretrain_res_subplots.png" alt="MY ALT TEXT" />
-        <h2 class="subtitle has-text-centered">
-          Performance of MAE↓ with pretraining on three datasets.
-        </h2>
-      </div>
-    </div>
-  </section>
-
-
-
-  <!-- Youtube video -->
-  <!-- <section class="hero is-small is-light">
-    <div class="hero-body">
-      <div class="container">
-        <h2 class="title is-3">Video Presentation</h2>
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-
-            <div class="publication-video">
-              <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media"
-                allowfullscreen></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-  <!-- End youtube video -->
 
 
   <!-- Video carousel -->
@@ -401,6 +319,109 @@
     </div>
   </section>
   <!-- End video carousel -->
+
+
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Robotic manipulation faces critical challenges in understanding spatial affordances—the "where" and "how"
+              of object interactions—essential for complex manipulation tasks like wiping a board or stacking objects.
+              Existing methods, including modular-based and end-to-end approaches, often lack robust spatial reasoning
+              capabilities. Unlike recent point-based and flow-based affordance methods that focus on dense spatial
+              representations or trajectory modeling, we propose A<sub>0</sub>, a hierarchical affordance-aware
+              diffusion model that decomposes manipulation task into high-level spatial affordance understanding and
+              low-level action execution. A<sub>0</sub> leverages the Embodiment-Agnostic Affordance Representation,
+              which captures object-centric spatial affordances by predicting contact point and post-contact
+              trajectories. A<sub>0</sub> is pre-trained on 1 million contact points data and fine-tuned on annotated
+              trajectories, enabling generalization across platforms. Key components include Position Offset Attention
+              for motion-aware feature extraction and a Spatial Information Aggregation Layer for precise coordinate
+              mapping. The model's output is executed by the action execution module. Experiments on multiple robotic
+              systems (Franka, Kinova, Realman and Dobot) demonstrate A<sub>0</sub>'s superior performance in complex
+              tasks, showcasing its efficiency, flexibility, and real-world applicability.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="a0_latex/figures/methodv5.png" alt="MY ALT TEXT" />
+        <h2 class="subtitle has-text-centered">
+          Overview of A<sub>0</sub> model.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="a0_latex/figures/teaser.png" alt="MY ALT TEXT" />
+        <h2 class="subtitle has-text-centered">
+          Comparison of different manipulation methods.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="a0_latex/figures/Qualitative.png" alt="MY ALT TEXT" />
+        <h2 class="subtitle has-text-centered">
+          Qualitative Results.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="a0_latex/figures/pretrain_res_subplots.png" class="myimg" alt="MY ALT TEXT" />
+        <h2 class="subtitle has-text-centered">
+          Pretraining significantly lowers T-waypoint MAE and improves generalization, underscoring its value for robust
+          manipulation.
+          <!-- Performance of MAE↓ with pretraining on three datasets. pre-training can decrease the MAE of T waypoints on specific tasks. Ablation studies demonstrate that pre-training enhances A<sub>0</sub>'s ability to generalize across unseen objects and environments. This highlights the importance of large-scale pre-training in building robust foundational capabilities for downstream robotic manipulation tasks. -->
+        </h2>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Youtube video -->
+  <!-- <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Video Presentation</h2>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+
+            <div class="publication-video">
+              <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- End youtube video -->
+
+
 
 
 
