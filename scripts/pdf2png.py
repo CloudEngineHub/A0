@@ -1,5 +1,6 @@
 # brew install poppler
 # pip install pdf2image
+# python scripts/pdf2png.py --src ICCV2025-Author-Kit-Feb --des a0_latex # --force
 
 from pathlib import Path
 import shutil
