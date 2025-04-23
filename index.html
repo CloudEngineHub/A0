@@ -61,7 +61,8 @@
     }
   </style>
   <script>
-    const VIDEO_FOLDER = "videos_x2_0";
+    // const VIDEO_FOLDER = "videos_x2_0";
+    const VIDEO_FOLDER = "videos_x2_0_gif";
   </script>
 </head>
 
@@ -226,28 +227,28 @@
           <div style="flex: 1; margin: 0.5%; text-align: center;">
             <video poster="" autoplay controls muted loop playsinline width="100%"
               style="border-radius: 4%; position: relative; left: -2%;">
-              <source data-filename="f1.mp4" type="video/mp4">
+              <source data-filename="f1.gif" type="video/mp4">
             </video>
             <p style="font-size: 16px;">Open drawer @Franka</p>
           </div>
           <div style="flex: 1; margin: 0.5%; text-align: center;">
             <video poster="" autoplay controls muted loop playsinline width="100%"
               style="border-radius: 4%; position: relative; left: -1.5%;">
-              <source data-filename="f2.mp4" type="video/mp4">
+              <source data-filename="f2.gif" type="video/mp4">
             </video>
             <p style="font-size: 16px;">Place on the plate @Franka</p>
           </div>
           <div style="flex: 1; margin: 0.5%; text-align: center;">
             <video poster="" autoplay controls muted loop playsinline width="100%"
               style="border-radius: 4%; position: relative; left: 0.5%;">
-              <source data-filename="f3.mp4" type="video/mp4">
+              <source data-filename="f3.gif" type="video/mp4">
             </video>
             <p style="font-size: 16px;">Press button @Franka</p>
           </div>
           <div style="flex: 1; margin: 0.5%; text-align: center;">
             <video poster="" autoplay controls muted loop playsinline width="100%"
               style="border-radius: 4%; position: relative; left: 0.5%;">
-              <source data-filename="f4.mp4" type="video/mp4">
+              <source data-filename="f4.gif" type="video/mp4">
             </video>
             <p style="font-size: 16px;">Wipe the white board @Franka</p>
           </div>
@@ -259,28 +260,28 @@
           <div style="flex: 1; margin: 0.5%; text-align: center;">
             <video poster="" autoplay controls muted loop playsinline width="100%"
               style="border-radius: 4%; position: relative; left: 0.5%;">
-              <source data-filename="f5.mp4" type="video/mp4">
+              <source data-filename="f5.gif" type="video/mp4">
             </video>
             <p style="font-size: 16px;">Wipe the blackboard @Franka</p>
           </div>
           <div style="flex: 1; margin: 0.5%; text-align: center;">
             <video poster="" autoplay controls muted loop playsinline width="100%"
               style="border-radius: 4%; position: relative; left: 0.5%;">
-              <source data-filename="k1.mp4" type="video/mp4">
+              <source data-filename="k1.gif" type="video/mp4">
             </video>
             <p style="font-size: 16px;">Press button @Kinova Gen3</p>
           </div>
           <div style="flex: 1; margin: 0.5%; text-align: center;">
             <video poster="" autoplay controls muted loop playsinline width="100%"
               style="border-radius: 4%; position: relative; left: 0.5%;">
-              <source data-filename="k2.mp4" type="video/mp4">
+              <source data-filename="k2.gif" type="video/mp4">
             </video>
             <p style="font-size: 16px;">Open drawer meanwhile @Kinova Gen3</p>
           </div>
           <div style="flex: 1; margin: 0.5%; text-align: center;">
             <video poster="" autoplay controls muted loop playsinline width="100%"
               style="border-radius: 4%; position: relative; left: 0.5%;">
-              <source data-filename="k3.mp4" type="video/mp4">
+              <source data-filename="k3.gif" type="video/mp4">
             </video>
             <p style="font-size: 16px;">Pick place @Kinova Gen3</p>
           </div>
@@ -292,28 +293,28 @@
           <div style="flex: 1; margin: 0.5%; text-align: center;">
             <video poster="" autoplay controls muted loop playsinline width="100%"
               style="border-radius: 4%; position: relative; left: 0.5%;">
-              <source data-filename="k4.mp4" type="video/mp4">
+              <source data-filename="k4.gif" type="video/mp4">
             </video>
             <p style="font-size: 16px;">Wipe board @Kinova Gen3</p>
           </div>
           <div style="flex: 1; margin: 0.5%; text-align: center;">
             <video poster="" autoplay controls muted loop playsinline width="100%"
               style="border-radius: 4%; position: relative; left: 0.5%;">
-              <source data-filename="f6.mp4" type="video/mp4">
+              <source data-filename="f6.gif" type="video/mp4">
             </video>
             <p style="font-size: 16px;">Wipe the blackboard @Franka</p>
           </div>
           <div style="flex: 1; margin: 0.5%; text-align: center;">
             <video poster="" autoplay controls muted loop playsinline width="100%"
               style="border-radius: 4%; position: relative; left: 0.5%;">
-              <source data-filename="k5.mp4" type="video/mp4">
+              <source data-filename="k5.gif" type="video/mp4">
             </video>
             <p style="font-size: 16px;">Put the blue block on top of the red block @Kinova Gen3</p>
           </div>
           <div style="flex: 1; margin: 0.5%; text-align: center;">
             <video poster="" autoplay controls muted loop playsinline width="100%"
               style="border-radius: 4%; position: relative; left: 0.5%;">
-              <source data-filename="r1.mp4" type="video/mp4">
+              <source data-filename="r1.gif" type="video/mp4">
             </video>
             <p style="font-size: 16px;">Wipe the blackboard @Realman</p>
           </div>
@@ -399,83 +400,10 @@
         <h2 class="subtitle has-text-centered">
           Pretraining significantly lowers T-waypoint MAE and improves generalization, underscoring its value for robust
           manipulation.
-          <!-- Performance of MAE↓ with pretraining on three datasets. pre-training can decrease the MAE of T waypoints on specific tasks. Ablation studies demonstrate that pre-training enhances A<sub>0</sub>'s ability to generalize across unseen objects and environments. This highlights the importance of large-scale pre-training in building robust foundational capabilities for downstream robotic manipulation tasks. -->
         </h2>
       </div>
     </div>
   </section>
-
-
-  <!-- Youtube video -->
-  <!-- <section class="hero is-small is-light">
-    <div class="hero-body">
-      <div class="container">
-        <h2 class="title is-3">Video Presentation</h2>
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-
-            <div class="publication-video">
-              <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media"
-                allowfullscreen></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-  <!-- End youtube video -->
-
-
-
-
-
-  <!-- <section class="section">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-1">Real Robot Experiments</h2>
-        <div class="columns">
-          <img id="table2" width="70%" src="static/images/table2.png"
-            style="display: block; margin-left: auto; margin-right: auto">
-        </div>
-        <div class="content has-text-justified">
-          <br>
-          <p style="font-size: 24px;">
-          </p>
-
-          <div class="columns is-centered has-text-centered">
-            <div style="flex: 1; margin: 0.5%; text-align: center;">
-              <video poster="" autoplay controls muted loop playsinline width="100%"
-                style="border-radius: 4%; position: relative; left: -2%;">
-                <source src="static/videos/pickup_00.mp4" type="video/mp4">
-              </video>
-              <p style="font-size: 16px;">pick up the blue block.</p>
-            </div>
-            <div style="flex: 1; margin: 0.5%; text-align: center;">
-              <video poster="" autoplay controls muted loop playsinline width="100%"
-                style="border-radius: 4%; position: relative; left: -1.5%;">
-                <source src="static/videos/sweep_00.mp4" type="video/mp4">
-              </video>
-              <p style="font-size: 16px;">Sweep the yellow block into pink stickers.</p>
-            </div>
-            <div style="flex: 1; margin: 0.5%; text-align: center;">
-              <video poster="" autoplay controls muted loop playsinline width="100%"
-                style="border-radius: 4%; position: relative; left: 0.5%;">
-                <source src="static/videos/press_button_00.mp4" type="video/mp4">
-              </video>
-              <p style="font-size: 16px;">Press the button.</p>
-            </div>
-            <div style="flex: 1; margin: 0.5%; text-align: center;">
-              <video poster="" autoplay controls muted loop playsinline width="100%"
-                style="border-radius: 4%; position: relative; left: 0.5%;">
-                <source src="static/videos/open_drawer_00.mp4" type="video/mp4">
-              </video>
-              <p style="font-size: 16px;">xxxxxxxxxxxxxxxxxxx</p>
-            </div>
-          </div>
-
-        </div>
-  </section> -->
-
 
 
 
@@ -531,8 +459,43 @@
     window.onload = () => {
       document.querySelectorAll("video source").forEach(source => {
         const filename = source.getAttribute("data-filename");
-        if (filename) {
-          source.setAttribute("src", `${VIDEO_FOLDER}/${filename}`);
+        const parent = source.parentElement;
+        const container = parent.parentElement;
+
+        const extension = filename.split('.').pop();
+        const mediaPath = `${VIDEO_FOLDER}/${filename.replace(/\.gif$/, ".gif")}`;
+
+        const style = parent.getAttribute("style") || "width: 100%; border-radius: 4%; position: relative; left: 0.5%;";
+        const caption = container.querySelector("p")?.outerHTML || "";
+
+        let newElement;
+
+        if (extension === "mp4") {
+          newElement = document.createElement("video");
+          newElement.setAttribute("autoplay", true);
+          newElement.setAttribute("controls", true);
+          newElement.setAttribute("muted", true);
+          // source.setAttribute("src", `${VIDEO_FOLDER}/${filename}`);
+          newElement.setAttribute("loop", true);
+          newElement.setAttribute("playsinline", true);
+          newElement.setAttribute("width", "100%");
+          newElement.setAttribute("style", style);
+
+          const newSource = document.createElement("source");
+          newSource.setAttribute("src", `${VIDEO_FOLDER}/${filename}`);
+          newSource.setAttribute("type", "video/mp4");
+          newElement.appendChild(newSource);
+        } else {
+          newElement = document.createElement("img");
+          newElement.setAttribute("src", mediaPath);
+          newElement.setAttribute("alt", filename);
+          newElement.setAttribute("style", style);
+        }
+
+        container.innerHTML = '';
+        container.appendChild(newElement);
+        if (caption) {
+          container.insertAdjacentHTML("beforeend", caption);
         }
       });
     };
