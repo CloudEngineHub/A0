@@ -42,6 +42,7 @@ pip install -r requirements.txt
    <!-- - `t5-v1_1-xxl`: [link](https://huggingface.co/google/t5-v1_1-xxl/tree/main)🤗 -->
    - `Qwen2.5-7B`:[link](https://huggingface.co/Qwen/Qwen2.5-7B)
    - `siglip`: [link](https://huggingface.co/google/siglip-so400m-patch14-384)🤗
+   
 Link the encoders to the repo directory:
 
    ```bash
