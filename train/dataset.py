@@ -321,20 +321,9 @@ class VLAConsumerDataset(Dataset):
         if use_precomp_lang_embed:
             self.empty_lang_embed = torch.load("data/empty_lang_embed.pt")
         
-        # Load dataset stat
-        # with open("configs/dataset_stat.json", 'r') as f:
-        #     dataset_stat = json.load(f)
-        # self.dataset_stat = dataset_stat
         
         self.tokenizer = tokenizer
-        # add special tokens
-        # self.tokenizer.add_tokens(
-        #     [
-        #         DEFAULT_IM_START_TOKEN,DEFAULT_IM_END_TOKEN,DEFAULT_OFFSET_START_TOKEN,
-        #         DEFAULT_OFFSET_END_TOKEN,DEFAULT_TEXT_START_TOKEN,DEFAULT_TEXT_END_TOKEN,
-        #     ],
-        #     special_tokens=True,
-        # )
+
     
         self.image_size = image_size
         self.auto_adjust_image_brightness = auto_adjust_image_brightness
@@ -343,11 +332,6 @@ class VLAConsumerDataset(Dataset):
         self.last_content = None
         self.last_meta = None
     
-    # def get_dataset_name2id(self):
-    #     return self.dataset_name2id
-    
-    # def get_dataset_id2name(self):
-    #     return self.dataset_id2name
         
     @staticmethod
     def pairwise(iterable):
@@ -382,9 +366,7 @@ class VLAConsumerDataset(Dataset):
                         # res['cam_right_wrist'], res['cam_right_wrist_mask'],
                         # res['cam_left_wrist'], res['cam_left_wrist_mask'],
                     ]
-                    # state_std = res['state_std']
-                    # state_mean = res['state_mean']
-                    # state_norm = res['state_norm']
+
                 else:
                     raise Exception("Only support hdf5 keyword.")
 
@@ -529,11 +511,9 @@ class DataCollatorForVLAConsumerDataset(object):
         batch = {
             # "states": [],
             "actions": [],
-            # "state_elem_mask": [],
-            # "state_norm": [],
+
             "images": [],
             "data_indices": [],
-            # "ctrl_freqs": []
         }
         input_ids = []
         lang_embeds = []
@@ -564,16 +544,13 @@ class DataCollatorForVLAConsumerDataset(object):
 
         
         keys_to_stack = [
-
             'actions',
-
             "images"
         ]
         for key in keys_to_stack:
 
             batch[key] = torch.stack(batch[key], dim=0)
         
-        # batch["ctrl_freqs"] = torch.tensor(batch["ctrl_freqs"])
     
         if len(input_ids) > 0:
             input_ids = torch.nn.utils.rnn.pad_sequence(

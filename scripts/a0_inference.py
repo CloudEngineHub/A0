@@ -31,6 +31,7 @@ def get_arguments():
                         default="Qwen/Qwen2.5-7B",help='Name or path to the pretrained text encoder. choice=[Qwen/Qwen2.5-7B,google/t5-v1_1-xxl]')
     parser.add_argument('--text_encoder',type=str,required=False,
                         default="Qwen2.5-7B",help='Name or path to the text encoder. choice=[Qwen2.5-7B,t5-v1_1-xxl]')
+    parser.add_argument('--poa',action='store_true',help='use position offset attention of embeddings of the image encoder')
     
     parser.add_argument("--instruction", type=str, required=True, help="Instruction for the robotic manipulation task")
 
@@ -118,6 +119,7 @@ def inference_fn(args):
     actions = policy.step(
         images=images2,
         text_embeds=lang_embeddings,
+        poa=args.poa
     )
 
     print(f"Model inference time: {time.time() - time1} s")
