@@ -1,4 +1,4 @@
-# python scripts/video_speed.py --dir "/Users/gmh/oasis/code/aff/A0/videos" --speed 2.0 --format gif
+# python scripts/video_speed.py --dir videos --speed 2.0 --format gif
 
 import argparse
 from pathlib import Path
