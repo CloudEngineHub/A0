@@ -1,17 +1,17 @@
 # $A_{0}$: An Affordance-Aware Hierarchical Model for General Robotic Manipulation
-### [![Paper](https://img.shields.io/badge/arXiv-2304.12345-b31b1b.svg)](https://arxiv.org/abs/2504.12636) | [![Webpage](https://img.shields.io/static/v1?label=Webpage&message=A0&color=blue)](https://a-embodied.github.io/A0/) |[![Hugging Face](https://img.shields.io/static/v1?label=Hugging%20Face&message=JianZhangAI%2FA0-1B&color=orange)](https://huggingface.co/JianZhangAI/A0-1B)
+### [![Paper](https://img.shields.io/badge/arXiv-2304.12345-b31b1b.svg)](https://arxiv.org/abs/2504.12636) | [![Webpage](https://img.shields.io/static/v1?label=Webpage&message=A0&color=blue)](https://a-embodied.github.io/A0/) |[![Hugging Face](https://img.shields.io/static/v1?label=Hugging%20Face&message=JianZhangAI%2FA0&color=orange)](https://huggingface.co/collections/JianZhangAI/a0-681db29ec18ddb53c7e5a33f)
 ![](./assets/method.png) 
 
-Results on HOI4D dataset
+Example results on HOI4D dataset
 | ![hoi4d1](./assets/hoi4d_sample1.jpg) | ![hoi4d2](./assets/hoi4d_sample2.jpg) | ![hoi4d3](./assets/hoi4d_sample3.jpg) |![hoi4d4](./assets/hoi4d_sample4.jpg) |
 |:------------------------:|:------------------------:|:------------------------:|:------------------------:|
 
 
-Results on Maniskill
+Example results on Maniskill
 | ![man1](./assets/maniskill_sample1.jpg) | ![man2](./assets/maniskill_sample2.jpg) | ![man3](./assets/maniskill_sample3.jpg) |![man4](./assets/maniskill_sample4.jpg) |![man5](./assets/maniskill_sample5.jpg) |
 |:------------------------:|:------------------------:|:------------------------:|:------------------------:|:------------------------:|
 
-Results on DROID dataset
+Example results on DROID dataset
 | ![droid1](./assets/droid_sample1.jpg) | ![droid2](./assets/droid_sample2.jpg) | ![droid3](./assets/droid_sample3.jpg) |![droid4](./assets/droid_sample4.jpg) |
 |:------------------------:|:------------------------:|:------------------------:|:------------------------:|
 
@@ -40,7 +40,7 @@ pip install -r requirements.txt
 
 ## Download Off-the-shelf Vision & Text Encoders
    <!-- - `t5-v1_1-xxl`: [link](https://huggingface.co/google/t5-v1_1-xxl/tree/main)🤗 -->
-   - `Qwen2.5-7B`:[link](https://huggingface.co/Qwen/Qwen2.5-7B)
+   - `Qwen2.5-7B`:[link](https://huggingface.co/Qwen/Qwen2.5-7B)🤗
    - `siglip`: [link](https://huggingface.co/google/siglip-so400m-patch14-384)🤗
    
 Link the encoders to the repo directory:
@@ -103,7 +103,7 @@ In our experiments, we used a batch size of 200 and trained the model for 30,000
 If you set `the hidden_size` to 1024 and the `depth` to 14 in [configs/base.yaml](configs/base.yaml), you will obtain a model with 170 million parameters.
 
 ## Test 
-You can test using your own trained model or the pre-trained model (🤗[A0-1B](https://huggingface.co/JianZhangAI/A0-1B)).<br>
+You can test using your own trained model or the pre-trained model (🤗[A0-1B](https://huggingface.co/JianZhangAI/A0-1B) and [A0-170M](https://huggingface.co/JianZhangAI/A0-170M)).<br>
 Set the variables `PRETRAINED_MODEL_NAME_OR_PATH` in [test_dataset.sh](./test_dataset.sh)
 ```bash
 # test performance on Maniskill dataset
@@ -117,7 +117,7 @@ bash test_dataset.sh droid
 ```
 
 ## Inference
-You can test using your own trained model or the pre-trained model (🤗[A0-1B](https://huggingface.co/JianZhangAI/A0-1B)).
+You can test using your own trained model or the pre-trained model (🤗[A0-1B](https://huggingface.co/JianZhangAI/A0-1B) and [A0-170M](https://huggingface.co/JianZhangAI/A0-170M)).
 ```bash 
 # set keyword arguments --pretrained_model_name_or_path, --instruction and --image_path
 bash inference.sh
