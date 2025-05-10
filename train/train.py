@@ -24,7 +24,7 @@ from models.ema_model import EMAModel
 from models.multimodal_encoder.siglip_encoder import SiglipVisionTower
 from models.multimodal_encoder.t5_encoder import T5Embedder
 from models.multimodal_encoder.qwen25_encoder import Qwen2Embedder
-from models.rdt_runner import RDTRunner
+from models.runner import DiTRunner
 from train.dataset import DataCollatorForVLAConsumerDataset, VLAConsumerDataset
 from train.sample import log_sample_res
 
@@ -150,7 +150,7 @@ def train(args, logger):
                         * config["common"]["num_cameras"] 
                         * vision_encoder.num_patches)
 
-        # rdt = RDTRunner(
+        # rdt = DiTRunner(
         #     action_dim=config["common"]["state_dim"],
         #     pred_horizon=config["common"]["action_chunk_size"],
         #     config=config["model"],
@@ -209,7 +209,7 @@ def train(args, logger):
         ###
 
 
-        rdt = RDTRunner.from_pretrained(args.pretrained_model_name_or_path)#, config=config["model"],action_dim=config["common"]["state_dim"],
+        rdt = DiTRunner.from_pretrained(args.pretrained_model_name_or_path)#, config=config["model"],action_dim=config["common"]["state_dim"],
                                         # pred_horizon=config["common"]["action_chunk_size"],lang_token_dim=config["model"]["lang_token_dim"],)
         # # 移除 lang_adaptor 的权重
         # del rdt.lang_adaptor
@@ -251,7 +251,7 @@ def train(args, logger):
                         * config["common"]["num_cameras"] 
                         * vision_encoder.num_patches)
         # 2187
-        rdt = RDTRunner(
+        rdt = DiTRunner(
             action_dim=config["common"]["state_dim"],
             pred_horizon=config["common"]["action_chunk_size"],
             config=config["model"],

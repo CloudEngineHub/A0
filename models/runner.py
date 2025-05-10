@@ -9,10 +9,10 @@ from diffusers.schedulers.scheduling_dpmsolver_multistep import \
     DPMSolverMultistepScheduler
 
 from models.hub_mixin import CompatiblePyTorchModelHubMixin
-from models.rdt.model import RDT
+from models.rdt.model import DiT
 
 
-class RDTRunner(
+class DiTRunner(
         nn.Module, 
         CompatiblePyTorchModelHubMixin, 
         repo_url="https://huggingface.co/robotics-diffusion-transformer/rdt-1b"
@@ -21,10 +21,10 @@ class RDTRunner(
                  lang_token_dim, img_token_dim, state_token_dim, 
                  max_lang_cond_len, img_cond_len, lang_pos_embed_config=None, 
                  img_pos_embed_config=None, dtype=torch.bfloat16):
-        super(RDTRunner, self).__init__()
+        super(DiTRunner, self).__init__()
         # Create diffusion model
         hidden_size = config['rdt']['hidden_size']
-        self.model = RDT(
+        self.model = DiT(
             output_dim=action_dim,
             horizon=pred_horizon,
             hidden_size=hidden_size,

@@ -9,7 +9,7 @@ from torchvision import transforms
 from models.multimodal_encoder.siglip_encoder import SiglipVisionTower
 from models.multimodal_encoder.t5_encoder import T5Embedder
 from models.multimodal_encoder.qwen25_encoder import Qwen2Embedder
-from models.rdt_runner import RDTRunner
+from models.runner import DiTRunner
 
 
 # Create the RDT model
@@ -70,7 +70,7 @@ class RoboticDiffusionTransformerModel(object):
             img_cond_len = (self.args["common"]["img_history_size"] 
                             * self.args["common"]["num_cameras"] 
                             * self.vision_model.num_patches)
-            _model = RDTRunner(
+            _model = DiTRunner(
                 action_dim=self.args["common"]["state_dim"],
                 pred_horizon=self.args["common"]["action_chunk_size"],
                 config=self.args["model"],
@@ -101,7 +101,7 @@ class RoboticDiffusionTransformerModel(object):
 
            
 
-            _model = RDTRunner.from_pretrained(pretrained,action_dim=self.args["common"]["state_dim"],
+            _model = DiTRunner.from_pretrained(pretrained,action_dim=self.args["common"]["state_dim"],
                                                pred_horizon=self.args["common"]["action_chunk_size"],
                                                config=self.args["model"],
                                                lang_token_dim=self.args["model"]["lang_token_dim"],
@@ -120,7 +120,7 @@ class RoboticDiffusionTransformerModel(object):
                                                 ],
                                                 dtype=self.dtype,
                                                )
-            # _model = RDTRunner(
+            # _model = DiTRunner(
             #     action_dim=self.args["common"]["state_dim"],
             #     pred_horizon=self.args["common"]["action_chunk_size"],
             #     config=self.args["model"],

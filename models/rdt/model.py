@@ -20,7 +20,7 @@ from models.rdt.blocks import (FinalLayer, RDTBlock, TimestepEmbedder,CrossAtten
 
 from timm.models.vision_transformer import RmsNorm
 
-class RDT(nn.Module):
+class DiT(nn.Module):
     """
     Class for Robotics Diffusion Transformers.
     """
