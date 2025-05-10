@@ -14,7 +14,7 @@ from collections import OrderedDict
 import torch
 import torch.nn as nn
 
-from models.rdt.blocks import (FinalLayer, RDTBlock, TimestepEmbedder,CrossAttention,
+from models.dit.blocks import (FinalLayer, RDTBlock, TimestepEmbedder,CrossAttention,
                                get_1d_sincos_pos_embed_from_grid,
                                get_multimodal_cond_pos_embed)
 

@@ -1,5 +1,5 @@
 # $A_{0}$: An Affordance-Aware Hierarchical Model for General Robotic Manipulation
-### [![Paper](https://img.shields.io/badge/arXiv-2304.12345-b31b1b.svg)](https://arxiv.org/abs/2504.12636) | [![Webpage](https://img.shields.io/static/v1?label=Webpage&message=A0&color=blue)](https://a-embodied.github.io/A0/) |[![Hugging Face](https://img.shields.io/static/v1?label=Hugging%20Face&message=JianZhangAI%2FA0&color=orange)](https://huggingface.co/collections/JianZhangAI/a0-681db29ec18ddb53c7e5a33f)
+### [![Paper](https://img.shields.io/badge/arXiv-2504.12636-b31b1b.svg)](https://arxiv.org/abs/2504.12636) | [![Webpage](https://img.shields.io/static/v1?label=Webpage&message=A0&color=blue)](https://a-embodied.github.io/A0/) |[![Hugging Face](https://img.shields.io/static/v1?label=Hugging%20Face&message=JianZhangAI%2FA0&color=orange)](https://huggingface.co/collections/JianZhangAI/a0-681db29ec18ddb53c7e5a33f)
 ![](./assets/method.png) 
 
 Example results on HOI4D dataset

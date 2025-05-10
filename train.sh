@@ -47,7 +47,7 @@ accelerate launch --main_process_port 29501 main.py \
     --text_encoder="Qwen2.5-7B" \
     --output_dir=$OUTPUT_DIR \
     --train_datasets="all" \
-    --train_batch_size=100 \
+    --train_batch_size=1 \
     --sample_batch_size=1 \
     --max_train_steps=160000 \
     --checkpointing_period=2000 \

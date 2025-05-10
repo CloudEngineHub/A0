@@ -28,7 +28,7 @@ from models.runner import DiTRunner
 from train.dataset import DataCollatorForVLAConsumerDataset, VLAConsumerDataset
 from train.sample import log_sample_res
 
-from models.rdt.blocks import FinalLayer
+from models.dit.blocks import FinalLayer
 
 # from constants import (DEFAULT_IM_START_TOKEN,DEFAULT_IM_END_TOKEN,)
 
@@ -150,99 +150,29 @@ def train(args, logger):
                         * config["common"]["num_cameras"] 
                         * vision_encoder.num_patches)
 
-        # rdt = DiTRunner(
-        #     action_dim=config["common"]["state_dim"],
-        #     pred_horizon=config["common"]["action_chunk_size"],
-        #     config=config["model"],
-        #     lang_token_dim=config["model"]["lang_token_dim"],
-        #     img_token_dim=config["model"]["img_token_dim"],
-        #     state_token_dim=config["model"]["state_token_dim"],
-        #     max_lang_cond_len=config["dataset"]["tokenizer_max_length"],
-        #     img_cond_len=img_cond_len,
-        #     img_pos_embed_config=[
-        #         # No initial pos embed in the last grid size
-        #         # since we've already done in ViT
-        #         ("image", (config["common"]["img_history_size"], 
-        #             config["common"]["num_cameras"], 
-        #             -vision_encoder.num_patches)),  
-        #     ],
-        #     lang_pos_embed_config=[
-        #         # Similarly, no initial pos embed for language
-        #         ("lang", -config["dataset"]["tokenizer_max_length"]),
-        #     ],
-        #     dtype=weight_dtype,
-        # )
+        rdt = DiTRunner(
+            action_dim=config["common"]["state_dim"],
+            pred_horizon=config["common"]["action_chunk_size"],
+            config=config["model"],
+            lang_token_dim=config["model"]["lang_token_dim"],
+            img_token_dim=config["model"]["img_token_dim"],
+            state_token_dim=config["model"]["state_token_dim"],
+            max_lang_cond_len=config["dataset"]["tokenizer_max_length"],
+            img_cond_len=img_cond_len,
+            img_pos_embed_config=[
+                # No initial pos embed in the last grid size
+                # since we've already done in ViT
+                ("image", (config["common"]["img_history_size"], 
+                    config["common"]["num_cameras"], 
+                    -vision_encoder.num_patches)),  
+            ],
+            lang_pos_embed_config=[
+                # Similarly, no initial pos embed for language
+                ("lang", -config["dataset"]["tokenizer_max_length"]),
+            ],
+            dtype=weight_dtype,
+        )
 
-        # ### 加载预训练权重
-        # state_dict = torch.load(os.path.join(args.pretrained_model_name_or_path,'pytorch_model.bin'), map_location="cpu")
-        # # 过滤掉不匹配的层
-        # filtered_state_dict = {k: v for k, v in state_dict.items() if k in rdt.state_dict() and v.size() == rdt.state_dict()[k].size()}
-        # # 加载过滤后的权重
-        # rdt.load_state_dict(filtered_state_dict, strict=False)
-        ###
-
-        ### 只加载前面层的权重
-        # 定义要加载的层数（例如前10层）
-        # k = 14  # 这里可以改成实际需要的层数
-        # state_dict = torch.load(os.path.join(args.pretrained_model_name_or_path,'pytorch_model.bin'), map_location="cpu")
-
-        # # 过滤逻辑
-        # filtered_state_dict = {}
-        # for key in state_dict:
-        #     # 1. 检查是否存在于当前模型
-        #     if key not in rdt.state_dict():
-        #         continue
-        #     # 2. 检查维度是否匹配
-        #     if state_dict[key].shape != rdt.state_dict()[key].shape:
-        #         continue
-        #     # 3. 处理blocks层
-        #     if key.startswith('model.blocks.'):
-        #         # 解析层号（例如'model.blocks.5...'中的5）
-        #         layer_num = int(key.split('.')[2])
-        #         if layer_num >= k:  # 跳过k层之后的block
-        #             continue
-        #     # 满足所有条件则保留
-        #     filtered_state_dict[key] = state_dict[key]
-
-        # # 加载过滤后的权重
-        # rdt.load_state_dict(filtered_state_dict, strict=False)
-        ###
-
-
-        rdt = DiTRunner.from_pretrained(args.pretrained_model_name_or_path)#, config=config["model"],action_dim=config["common"]["state_dim"],
-                                        # pred_horizon=config["common"]["action_chunk_size"],lang_token_dim=config["model"]["lang_token_dim"],)
-        # # 移除 lang_adaptor 的权重
-        # del rdt.lang_adaptor
-        # del rdt.state_adaptor
-        # del rdt.model.x_pos_embed
-        # del rdt.action_dim
-        # del rdt.pred_horizon
-        # del rdt.model.horizon
-        # del rdt.model.final_layer
-        
-        del rdt.model.img_cond_pos_embed
-        
-        # # 重新初始化 lang_adaptor
-        # rdt.lang_adaptor = rdt.build_condition_adapter(
-        #     config['model']['lang_adaptor'], 
-        #     in_features=config["model"]["lang_token_dim"],  # 使用本地的维度配置
-        #     out_features=config['model']['rdt']['hidden_size']
-        # )
-        # rdt.state_adaptor = rdt.build_condition_adapter(
-        #     config['model']['state_adaptor'], 
-        #     in_features=config["model"]["state_token_dim"] * 2,    # state + state mask (indicator)
-        #     out_features=config['model']['rdt']['hidden_size']
-        # )
-        # # print('******* rdt.state_adaptor.0.weight.shape',rdt.state_adaptor[0].weight.shape)
-        # rdt.model.x_pos_embed =  torch.nn.Parameter(torch.zeros(1, config["common"]["action_chunk_size"]+1, config['model']['rdt']['hidden_size']))
-        # rdt.action_dim = config["common"]["state_dim"]
-        # rdt.pred_horizon = config["common"]["action_chunk_size"]
-        # rdt.model.horizon = config["common"]["action_chunk_size"]
-        # rdt.model.final_layer = FinalLayer(config['model']['rdt']['hidden_size'], config["common"]["state_dim"])
-
-
-
-        rdt.model.img_cond_pos_embed = torch.nn.Parameter(torch.zeros(1, img_cond_len , config['model']['rdt']['hidden_size']))
         
     else:
         logger.info("Constructing model from provided config.")
@@ -250,7 +180,7 @@ def train(args, logger):
         img_cond_len = (config["common"]["img_history_size"] 
                         * config["common"]["num_cameras"] 
                         * vision_encoder.num_patches)
-        # 2187
+        
         rdt = DiTRunner(
             action_dim=config["common"]["state_dim"],
             pred_horizon=config["common"]["action_chunk_size"],
