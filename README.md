@@ -99,8 +99,9 @@ And set `--pretrained_model_name_or_path` to load it as initial parameters.
 ```bash
 source train.sh
 ```
-In our experiments, we used a batch size of 200 and trained the model for 30,000 steps. <br>
-If you set `the hidden_size` to 1024 and the `depth` to 14 in [configs/base.yaml](configs/base.yaml), you will obtain a model with 170 million parameters.
+### Experimental Details 
+- The default model configuration (hidden size: 2048, depth: 28) contains 1 billion parameters. By setting the `the hidden_size` to 1024 and the `depth` to 14 in [configs/base.yaml](configs/base.yaml), you can obtain a model with approximately 170 million parameters.
+- In our experiments, we used 2 GPU cards with a batch size of 100 and trained the model for 30,000 steps. The 170M model required 46 GB of memory per card. In comparison, the 1B model  required 73 GB of memory per card.
 
 ## Test 
 You can test using your own trained model or the pre-trained model (🤗[A0-1B](https://huggingface.co/JianZhangAI/A0-1B) and [A0-170M](https://huggingface.co/JianZhangAI/A0-170M)).<br>
