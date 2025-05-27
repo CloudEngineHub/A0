@@ -67,6 +67,9 @@
       /* 完整显示图片，可能留白 */
     }
   </style>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
   <script>
     // const VIDEO_FOLDER = "videos_x2_0";
     const VIDEO_FOLDER = "videos_x2_0_gif";
@@ -462,9 +465,178 @@
     </div>
   </section>
 
+  <div style="text-align: center; margin-top: 2em;">
+    <table
+      style="margin: 0 auto; border-collapse: collapse; width: 60%; border-top: 2px solid black; border-bottom: 2px solid black;">
+      <thead>
+        <tr>
+          <th>\( \mathrm{MAE}\downarrow \)</th>
+          <th>HOI4D-22k</th>
+          <th>Maniskill-5k</th>
+          <th>DROID-3k</th>
+        </tr>
+        <tr style="border-bottom: 1px solid black;"></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>\( A_0\text{-1B} \)</td>
+          <td>47.5</td>
+          <td>5.5</td>
+          <td>17.5</td>
+        </tr>
+        <tr>
+          <td>\( A_0\text{-1B w/o POA} \)</td>
+          <td>47.9</td>
+          <td>6.3</td>
+          <td>18.5</td>
+        </tr>
+        <tr>
+          <td>\( A_0\text{-1B w/o SIAL} \)</td>
+          <td>61.1</td>
+          <td>10.2</td>
+          <td>19.6</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div
+      style="margin-top: 0.5em; font-size: 0.9em; color: #444; max-width: 700px; margin-left: auto; margin-right: auto;">
+      <em>
+        Table 1: Ablation studies of network architecture. \( A_0\text{-1B} \) is pretrained on Pixmo-One-Point. 'POA'
+        denotes Position Offset Attention and 'SIAL' denotes Spatial Information Aggregation Layer. We use MAE (lower is
+        better) as evaluation metric.
+      </em>
+    </div>
+  </div>
 
 
 
+  <!-- Manipulation tasks performance table -->
+  <div style="text-align: center; margin-top: 3em;">
+    <table
+      style="margin: 0 auto; border-collapse: collapse; width: 80%; border-top: 2px solid black; border-bottom: 2px solid black;">
+      <thead>
+        <tr>
+          <th>Robot</th>
+          <th>Method</th>
+          <th>Place Object</th>
+          <th>Open Drawer</th>
+          <th>Press Button</th>
+          <th>Wipe Board</th>
+          <th>Avg. Success</th>
+        </tr>
+        <tr style="border-bottom: 1px solid black;"></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="3" style="vertical-align: middle;">Kinova</td>
+          <td>MOKA</td>
+          <td>70</td>
+          <td>50</td>
+          <td>30</td>
+          <td>30</td>
+          <td>45.00</td>
+        </tr>
+        <tr>
+          <td>ReKep</td>
+          <td><strong>75</strong></td>
+          <td>55</td>
+          <td>5</td>
+          <td>0</td>
+          <td>33.75</td>
+        </tr>
+        <tr style="background-color: lightgray;">
+          <td>\( A_0\text{-1B} \)</td>
+          <td>60</td>
+          <td><strong>65</strong></td>
+          <td><strong>40</strong></td>
+          <td><strong>50</strong></td>
+          <td><strong>53.75</strong></td>
+        </tr>
+        <tr style="border-bottom: 1px solid black;"></tr>
+        <tr>
+          <td rowspan="3" style="vertical-align: middle;">Franka</td>
+          <td>Magma</td>
+          <td>25</td>
+          <td>10</td>
+          <td>30</td>
+          <td>0</td>
+          <td>16.25</td>
+        </tr>
+        <tr>
+          <td>Molmo</td>
+          <td>60</td>
+          <td>40</td>
+          <td>55</td>
+          <td>20</td>
+          <td>43.75</td>
+        </tr>
+        <tr style="background-color: lightgray;">
+          <td><strong>\( A_0\text{-1B} \)</strong></td>
+          <td><strong>60</strong></td>
+          <td><strong>75</strong></td>
+          <td><strong>70</strong></td>
+          <td><strong>45</strong></td>
+          <td><strong>62.50</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div
+      style="margin-top: 0.5em; font-size: 0.9em; color: #444; max-width: 800px; margin-left: auto; margin-right: auto;">
+      <em>
+        Table 2: Performance evaluation of different large language model-based policies across four manipulation tasks
+        on two distinct robotic platforms. Our method demonstrates strong platform-agnostic capabilities by achieving
+        consistently high success rates across both Kinova Gen3 and Franka Emika robots.
+      </em>
+    </div>
+  </div>
+
+
+  <!-- New Table: MathJax-enabled, caption below, centered -->
+  <div style="text-align: center; margin-top: 3em;">
+    <table
+      style="margin: 0 auto; border-collapse: collapse; width: 60%; border-top: 2px solid black; border-bottom: 2px solid black;">
+      <thead>
+        <tr>
+          <th>~</th>
+          <th>Wipe Board</th>
+          <th>Steps</th>
+        </tr>
+        <tr style="border-bottom: 1px solid black;"></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>RDT-1B&nbsp;<a href="#BibTeX" style="text-decoration: none;">[1]</a></td>
+          <td>10</td>
+          <td>25–50</td>
+        </tr>
+        <tr>
+          <td>\( \pi_0 \)&nbsp;<a href="#BibTeX" style="text-decoration: none;">[2]</a></td>
+          <td>35</td>
+          <td>25–50</td>
+        </tr>
+        <tr>
+          <td>\( \pi_0 \)+FAST&nbsp;<a href="#BibTeX" style="text-decoration: none;">[2]</a></td>
+          <td>30</td>
+          <td>25–50</td>
+        </tr>
+        <tr>
+          <td>\( A_0\text{-1B} \)</td>
+          <td>50</td>
+          <td>4–5</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div
+      style="margin-top: 0.5em; font-size: 0.9em; color: #444; max-width: 700px; margin-left: auto; margin-right: auto;">
+      <em>
+        Table 3: Comparison with RDT-1B and \( \pi_0 \) on the Wipe Board task using the Kinova platform, highlighting
+        our method's superiority in trajectory-following and task execution efficiency.
+      </em>
+    </div>
+  </div>
 
   <!--BibTex citation -->
   <section class="section" id="BibTeX">
