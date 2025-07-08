@@ -96,7 +96,7 @@ class DroidWaypointDataset(Dataset):
         return valid_episodes
 
 
-    def split_dataset(self, train_ratio=0.8, shuffle=True):
+    def split_dataset(self, train_ratio=0.9, shuffle=True):
         if shuffle:
             random.shuffle(self.json_files)  # Shuffle the dataset
         

@@ -1,4 +1,5 @@
 # Copyright (c) Meta Platforms, Inc. and affiliates.
+# Copyright (c) 2024 TSAIL group
 # All rights reserved.
 
 # This source code is licensed under the license found in the
@@ -8,6 +9,7 @@
 # DiT: https://github.com/facebookresearch/DiT
 # GLIDE: https://github.com/openai/glide-text2im
 # MAE: https://github.com/facebookresearch/mae/blob/main/models_mae.py
+# RDT-1B: https://github.com/thu-ml/RoboticsDiffusionTransformer
 # --------------------------------------------------------
 
 
