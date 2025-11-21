@@ -135,4 +135,5 @@ bash inference.sh
 ```
 
 ## Acknowledgement
-[RDT-1B](https://github.com/thu-ml/RoboticsDiffusionTransformer)
+[RDT-1B](https://github.com/thu-ml/RoboticsDiffusionTransformer)  
+[Track Anything](https://github.com/gaomingqi/Track-Anything)
